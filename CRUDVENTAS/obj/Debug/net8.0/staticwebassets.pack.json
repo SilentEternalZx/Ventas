@@ -1,0 +1,333 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\julia\\OneDrive\\Documents\\Programación\\Prácticas_C#\\CRUDVENTAS\\CRUDVENTAS\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\CRUDVENTAS.bundle.scp.css",
+      "PackagePath": "staticwebassets\\CRUDVENTAS.y9pvdnljgt.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\julia\\OneDrive\\Documents\\Programación\\Prácticas_C#\\CRUDVENTAS\\CRUDVENTAS\\wwwroot\\Icons\\2.png",
+      "PackagePath": "staticwebassets\\Icons\\2.png"
+    },
+    {
+      "Id": "C:\\Users\\julia\\OneDrive\\Documents\\Programación\\Prácticas_C#\\CRUDVENTAS\\CRUDVENTAS\\wwwroot\\Icons\\atom.svg",
+      "PackagePath": "staticwebassets\\Icons\\atom.svg"
+    },
+    {
+      "Id": "C:\\Users\\julia\\OneDrive\\Documents\\Programación\\Prácticas_C#\\CRUDVENTAS\\CRUDVENTAS\\wwwroot\\Icons\\csv.png",
+      "PackagePath": "staticwebassets\\Icons\\csv.png"
+    },
+    {
+      "Id": "C:\\Users\\julia\\OneDrive\\Documents\\Programación\\Prácticas_C#\\CRUDVENTAS\\CRUDVENTAS\\wwwroot\\Icons\\delete.png",
+      "PackagePath": "staticwebassets\\Icons\\delete.png"
+    },
+    {
+      "Id": "C:\\Users\\julia\\OneDrive\\Documents\\Programación\\Prácticas_C#\\CRUDVENTAS\\CRUDVENTAS\\wwwroot\\Icons\\edit.png",
+      "PackagePath": "staticwebassets\\Icons\\edit.png"
+    },
+    {
+      "Id": "C:\\Users\\julia\\OneDrive\\Documents\\Programación\\Prácticas_C#\\CRUDVENTAS\\CRUDVENTAS\\wwwroot\\Icons\\excel.png",
+      "PackagePath": "staticwebassets\\Icons\\excel.png"
+    },
+    {
+      "Id": "C:\\Users\\julia\\OneDrive\\Documents\\Programación\\Prácticas_C#\\CRUDVENTAS\\CRUDVENTAS\\wwwroot\\Icons\\filter-time.gif",
+      "PackagePath": "staticwebassets\\Icons\\filter-time.gif"
+    },
+    {
+      "Id": "C:\\Users\\julia\\OneDrive\\Documents\\Programación\\Prácticas_C#\\CRUDVENTAS\\CRUDVENTAS\\wwwroot\\Icons\\filter-time.png",
+      "PackagePath": "staticwebassets\\Icons\\filter-time.png"
+    },
+    {
+      "Id": "C:\\Users\\julia\\OneDrive\\Documents\\Programación\\Prácticas_C#\\CRUDVENTAS\\CRUDVENTAS\\wwwroot\\Icons\\info.png",
+      "PackagePath": "staticwebassets\\Icons\\info.png"
+    },
+    {
+      "Id": "C:\\Users\\julia\\OneDrive\\Documents\\Programación\\Prácticas_C#\\CRUDVENTAS\\CRUDVENTAS\\wwwroot\\Icons\\new-product.png",
+      "PackagePath": "staticwebassets\\Icons\\new-product.png"
+    },
+    {
+      "Id": "C:\\Users\\julia\\OneDrive\\Documents\\Programación\\Prácticas_C#\\CRUDVENTAS\\CRUDVENTAS\\wwwroot\\Icons\\pdf.png",
+      "PackagePath": "staticwebassets\\Icons\\pdf.png"
+    },
+    {
+      "Id": "C:\\Users\\julia\\OneDrive\\Documents\\Programación\\Prácticas_C#\\CRUDVENTAS\\CRUDVENTAS\\wwwroot\\Icons\\pngwing.com (1).png",
+      "PackagePath": "staticwebassets\\Icons\\pngwing.com (1).png"
+    },
+    {
+      "Id": "C:\\Users\\julia\\OneDrive\\Documents\\Programación\\Prácticas_C#\\CRUDVENTAS\\CRUDVENTAS\\wwwroot\\Icons\\pngwing.com.png",
+      "PackagePath": "staticwebassets\\Icons\\pngwing.com.png"
+    },
+    {
+      "Id": "C:\\Users\\julia\\OneDrive\\Documents\\Programación\\Prácticas_C#\\CRUDVENTAS\\CRUDVENTAS\\wwwroot\\Icons\\printer.png",
+      "PackagePath": "staticwebassets\\Icons\\printer.png"
+    },
+    {
+      "Id": "C:\\Users\\julia\\OneDrive\\Documents\\Programación\\Prácticas_C#\\CRUDVENTAS\\CRUDVENTAS\\wwwroot\\Icons\\rating.png",
+      "PackagePath": "staticwebassets\\Icons\\rating.png"
+    },
+    {
+      "Id": "C:\\Users\\julia\\OneDrive\\Documents\\Programación\\Prácticas_C#\\CRUDVENTAS\\CRUDVENTAS\\wwwroot\\Icons\\sales.png",
+      "PackagePath": "staticwebassets\\Icons\\sales.png"
+    },
+    {
+      "Id": "C:\\Users\\julia\\OneDrive\\Documents\\Programación\\Prácticas_C#\\CRUDVENTAS\\CRUDVENTAS\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\julia\\OneDrive\\Documents\\Programación\\Prácticas_C#\\CRUDVENTAS\\CRUDVENTAS\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\julia\\OneDrive\\Documents\\Programación\\Prácticas_C#\\CRUDVENTAS\\CRUDVENTAS\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\julia\\OneDrive\\Documents\\Programación\\Prácticas_C#\\CRUDVENTAS\\CRUDVENTAS\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\Users\\julia\\OneDrive\\Documents\\Programación\\Prácticas_C#\\CRUDVENTAS\\CRUDVENTAS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\julia\\OneDrive\\Documents\\Programación\\Prácticas_C#\\CRUDVENTAS\\CRUDVENTAS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\julia\\OneDrive\\Documents\\Programación\\Prácticas_C#\\CRUDVENTAS\\CRUDVENTAS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\julia\\OneDrive\\Documents\\Programación\\Prácticas_C#\\CRUDVENTAS\\CRUDVENTAS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\julia\\OneDrive\\Documents\\Programación\\Prácticas_C#\\CRUDVENTAS\\CRUDVENTAS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\julia\\OneDrive\\Documents\\Programación\\Prácticas_C#\\CRUDVENTAS\\CRUDVENTAS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\julia\\OneDrive\\Documents\\Programación\\Prácticas_C#\\CRUDVENTAS\\CRUDVENTAS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\julia\\OneDrive\\Documents\\Programación\\Prácticas_C#\\CRUDVENTAS\\CRUDVENTAS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\julia\\OneDrive\\Documents\\Programación\\Prácticas_C#\\CRUDVENTAS\\CRUDVENTAS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\julia\\OneDrive\\Documents\\Programación\\Prácticas_C#\\CRUDVENTAS\\CRUDVENTAS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\julia\\OneDrive\\Documents\\Programación\\Prácticas_C#\\CRUDVENTAS\\CRUDVENTAS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\julia\\OneDrive\\Documents\\Programación\\Prácticas_C#\\CRUDVENTAS\\CRUDVENTAS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\julia\\OneDrive\\Documents\\Programación\\Prácticas_C#\\CRUDVENTAS\\CRUDVENTAS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\julia\\OneDrive\\Documents\\Programación\\Prácticas_C#\\CRUDVENTAS\\CRUDVENTAS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\julia\\OneDrive\\Documents\\Programación\\Prácticas_C#\\CRUDVENTAS\\CRUDVENTAS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\julia\\OneDrive\\Documents\\Programación\\Prácticas_C#\\CRUDVENTAS\\CRUDVENTAS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\julia\\OneDrive\\Documents\\Programación\\Prácticas_C#\\CRUDVENTAS\\CRUDVENTAS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\julia\\OneDrive\\Documents\\Programación\\Prácticas_C#\\CRUDVENTAS\\CRUDVENTAS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\julia\\OneDrive\\Documents\\Programación\\Prácticas_C#\\CRUDVENTAS\\CRUDVENTAS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\julia\\OneDrive\\Documents\\Programación\\Prácticas_C#\\CRUDVENTAS\\CRUDVENTAS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\julia\\OneDrive\\Documents\\Programación\\Prácticas_C#\\CRUDVENTAS\\CRUDVENTAS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\julia\\OneDrive\\Documents\\Programación\\Prácticas_C#\\CRUDVENTAS\\CRUDVENTAS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\julia\\OneDrive\\Documents\\Programación\\Prácticas_C#\\CRUDVENTAS\\CRUDVENTAS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\julia\\OneDrive\\Documents\\Programación\\Prácticas_C#\\CRUDVENTAS\\CRUDVENTAS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\julia\\OneDrive\\Documents\\Programación\\Prácticas_C#\\CRUDVENTAS\\CRUDVENTAS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\julia\\OneDrive\\Documents\\Programación\\Prácticas_C#\\CRUDVENTAS\\CRUDVENTAS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\julia\\OneDrive\\Documents\\Programación\\Prácticas_C#\\CRUDVENTAS\\CRUDVENTAS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\julia\\OneDrive\\Documents\\Programación\\Prácticas_C#\\CRUDVENTAS\\CRUDVENTAS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\julia\\OneDrive\\Documents\\Programación\\Prácticas_C#\\CRUDVENTAS\\CRUDVENTAS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\julia\\OneDrive\\Documents\\Programación\\Prácticas_C#\\CRUDVENTAS\\CRUDVENTAS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\julia\\OneDrive\\Documents\\Programación\\Prácticas_C#\\CRUDVENTAS\\CRUDVENTAS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\julia\\OneDrive\\Documents\\Programación\\Prácticas_C#\\CRUDVENTAS\\CRUDVENTAS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\julia\\OneDrive\\Documents\\Programación\\Prácticas_C#\\CRUDVENTAS\\CRUDVENTAS\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\julia\\OneDrive\\Documents\\Programación\\Prácticas_C#\\CRUDVENTAS\\CRUDVENTAS\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\julia\\OneDrive\\Documents\\Programación\\Prácticas_C#\\CRUDVENTAS\\CRUDVENTAS\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\julia\\OneDrive\\Documents\\Programación\\Prácticas_C#\\CRUDVENTAS\\CRUDVENTAS\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\julia\\OneDrive\\Documents\\Programación\\Prácticas_C#\\CRUDVENTAS\\CRUDVENTAS\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\julia\\OneDrive\\Documents\\Programación\\Prácticas_C#\\CRUDVENTAS\\CRUDVENTAS\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Users\\julia\\OneDrive\\Documents\\Programación\\Prácticas_C#\\CRUDVENTAS\\CRUDVENTAS\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\julia\\OneDrive\\Documents\\Programación\\Prácticas_C#\\CRUDVENTAS\\CRUDVENTAS\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\julia\\OneDrive\\Documents\\Programación\\Prácticas_C#\\CRUDVENTAS\\CRUDVENTAS\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\julia\\OneDrive\\Documents\\Programación\\Prácticas_C#\\CRUDVENTAS\\CRUDVENTAS\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\julia\\OneDrive\\Documents\\Programación\\Prácticas_C#\\CRUDVENTAS\\CRUDVENTAS\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\julia\\OneDrive\\Documents\\Programación\\Prácticas_C#\\CRUDVENTAS\\CRUDVENTAS\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\julia\\OneDrive\\Documents\\Programación\\Prácticas_C#\\CRUDVENTAS\\CRUDVENTAS\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\julia\\OneDrive\\Documents\\Programación\\Prácticas_C#\\CRUDVENTAS\\CRUDVENTAS\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\julia\\OneDrive\\Documents\\Programación\\Prácticas_C#\\CRUDVENTAS\\CRUDVENTAS\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\julia\\OneDrive\\Documents\\Programación\\Prácticas_C#\\CRUDVENTAS\\CRUDVENTAS\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\julia\\OneDrive\\Documents\\Programación\\Prácticas_C#\\CRUDVENTAS\\CRUDVENTAS\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\Users\\julia\\OneDrive\\Documents\\Programación\\Prácticas_C#\\CRUDVENTAS\\CRUDVENTAS\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Users\\julia\\OneDrive\\Documents\\Programación\\Prácticas_C#\\CRUDVENTAS\\CRUDVENTAS\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\julia\\OneDrive\\Documents\\Programación\\Prácticas_C#\\CRUDVENTAS\\CRUDVENTAS\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\julia\\OneDrive\\Documents\\Programación\\Prácticas_C#\\CRUDVENTAS\\CRUDVENTAS\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\julia\\OneDrive\\Documents\\Programación\\Prácticas_C#\\CRUDVENTAS\\CRUDVENTAS\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\julia\\OneDrive\\Documents\\Programación\\Prácticas_C#\\CRUDVENTAS\\CRUDVENTAS\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\julia\\OneDrive\\Documents\\Programación\\Prácticas_C#\\CRUDVENTAS\\CRUDVENTAS\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.CRUDVENTAS.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.CRUDVENTAS.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.CRUDVENTAS.props",
+      "PackagePath": "build\\CRUDVENTAS.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.CRUDVENTAS.props",
+      "PackagePath": "buildMultiTargeting\\CRUDVENTAS.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.CRUDVENTAS.props",
+      "PackagePath": "buildTransitive\\CRUDVENTAS.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

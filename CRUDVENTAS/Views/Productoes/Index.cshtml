@@ -1,0 +1,188 @@
+﻿@model IEnumerable<CRUDVENTAS.Models.Producto>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Gestión de productos</h1>
+
+
+
+@* Importación de estilo index
+ *@
+
+@await Html.PartialAsync("IndexStyle")
+<p>
+
+
+    <div class="create">
+        <a asp-action="Create" class="btn btn-create "> 
+            <img src="~/icons/new-product.png" alt="Crear" class="btn-icon" />
+            Crear producto
+
+
+        </a>
+    </div>
+
+</p>
+<table id="example" class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Precio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Stock)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Precio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Stock)
+            </td>
+            <td>
+
+                    <div class="action-buttons">
+                        <a asp-action="Edit" class="btn " asp-route-id="@item.ProductoId">
+
+                            <img src="~/icons/edit.png" width="20" height="20" />
+                        </a>
+                        <a asp-action="Details" class="btn" asp-route-id="@item.ProductoId">
+                            <img src="~/icons/info.png" />
+                        </a>
+                        <a asp-action="Delete" class="btn-delete" asp-route-id="@item.ProductoId" data-id="@item.ProductoId">
+                            <img src="~/icons/delete.png" />
+                        </a>
+                    </div>
+            
+            </td> 
+        </tr>
+}
+    </tbody>
+</table>
+
+@* Script del datatable *@
+
+<script>
+    new DataTable('#example', {
+        layout: {
+            topStart: {
+                buttons: [
+                    {
+                        extend: 'copy',
+                        text: 'Copiar',
+                        className: 'botonCopiar dt-button'
+                    },
+                    {
+                        extend: 'csv',
+                    text: '<img src="' + '@Url.Content("~/icons/csv.png")' + '" alt="CSV" class="btn-icon" />',
+                    className: 'botonCsv dt-button'
+
+                    },
+                    {
+                              extend: 'excel',
+                    text: '<img src="' + '@Url.Content("~/icons/excel.png")' + '" alt="Excel" class="btn-icon" />',
+                    className: 'botonExcel dt-button'
+                    },
+                    {
+                        extend: 'pdfHtml5',
+                    text: '<img src="' + '@Url.Content("~/icons/pdf.png")' + '" alt="PDF" class="btn-icon" />',
+                    title:"Productos",
+                    className: 'botonPdf dt-button',
+                     exportOptions: {
+                         columns: [ 0, 1, 2]
+                    },
+                        customize: function(doc) {
+                        doc.content[1].margin = [ 180, 0, 180, 0 ] //left, top, right, bottom
+                      }
+
+                    },
+                    {
+                        extend: 'print',
+                    text: '<img src="' + '@Url.Content("~/icons/printer.png")' + '" alt="Imprimir" class="btn-icon" />',
+                    className: 'botonPrint dt-button'
+                    },
+                    {
+                         extend: 'colvis',
+                    text: '<img src="' + '@Url.Content("~/icons/filter-time.png")' + '" alt="Filtrar" class="btn-icon" />',
+                    className: 'botonColvis dt-button'
+                    }
+                ]
+            }
+        },
+        language: {
+            url: '//cdn.datatables.net/plug-ins/2.0.2/i18n/es-ES.json',
+        },
+        scrollX: true,
+        initComplete: function () {
+            $(".dt-buttons").removeClass("dt-buttons");
+            $(".dt-button").addClass("botones");
+        }
+
+    });
+</script>
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+          $(document).ready(function () {
+            $(".btn-delete").click(function (e) {
+                e.preventDefault();
+                var id = $(this).data("id");
+             
+                // Mostrar la confirmación de SweetAlert
+                Swal.fire({
+                    title: '¿Estás seguro?',
+                    text: "¡No podrás revertir esto!",
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: '¡Sí, eliminar!'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        // Realizar la solicitud de eliminación
+                        $.ajax({
+                            url: '/Productoes/Delete/' + id,
+                            type: 'POST',
+                            success: function (data) {
+                                if (data.success) {
+                                    // Si la eliminación fue exitosa
+                                   
+                                    Swal.fire(
+                                        '¡Eliminado!',
+                                        'El producto ha sido eliminado.',
+                                        'success'
+                                    ).then(() => {
+                                        // Recarga la página para actualizar la lista de clientes
+                                        location.reload();
+                                    });
+                                }
+                            },
+                            error: function (xhr, status, error) {
+                                // Si ocurre un error de red u otro tipo
+                                Swal.fire(
+                                    '¡Error!',
+                                    'Ocurrió un error al eliminar el producto.',
+                                    'error'
+                                );
+                            }
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+}

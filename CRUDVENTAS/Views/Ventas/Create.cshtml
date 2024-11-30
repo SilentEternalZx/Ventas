@@ -1,0 +1,227 @@
+﻿@model CRUDVENTAS.Models.VentasViewModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<style>
+    h2 {
+        text-align: center;
+    }
+
+    .form-group {
+        padding-top: 10px;
+    }
+
+        .form-group input {
+            border: 2px solid black;
+        }
+
+        .form-group select {
+            border: 2px solid black;
+        }
+
+    /* New rule to center the buttons at the bottom */
+    div:last-child {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+
+    .btn {
+        background-color: #81c9fa;
+        color: white;
+        font-weight:bold;
+
+    }
+
+        .btn:hover {
+            background-color: #3c1ff8;
+            color: white;
+            font-weight:bold;
+           
+        }
+</style>
+
+<h2>Crear Venta</h2>
+<form id="ventaForm" asp-action="Create" method="post">
+    <div class="form-group">
+        <label asp-for="ClienteId" class="control-label">Cliente</label>
+        <select asp-for="ClienteId" class="form-control">
+            <option value="">Seleccione un cliente</option>
+            @foreach (var item in ViewBag.Clientes)
+            {
+                <option value="@item.ClienteId">@item.Nombre</option>
+            }
+        </select>
+    </div>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Producto</th>
+                <th>Cantidad</th>
+                <th>Precio</th>
+                <th>Subtotal</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody id="detalles">
+        </tbody>
+    </table>
+
+    <div class="form-group">
+        <label>Producto</label>
+        <select id="producto" class="form-control">
+            <option value="">Seleccione un producto</option>
+            @foreach (var item in ViewBag.Productos)
+            {
+                <option value="@item.ProductoId" data-precio="@item.Precio" data-stock="@item.Stock">@item.Nombre</option>
+            }
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label>Cantidad</label>
+        <input type="number" id="cantidad" class="form-control" min="1" />
+    </div>
+
+    <div class="text-center mt-3">
+        <a asp-action="Index" class="btn btn-secondary me-2">Volver</a>
+        <button type="submit" class="btn btn-success me-2">Guardar Venta</button>
+        <button type="button" id="agregarProducto" class="btn btn-primary">Agregar Producto</button>
+    </div>
+
+    <div class="form-group">
+        <label>Total:</label>
+        <span id="total">0.00</span>
+        <input type="hidden" id="totalHidden" name="Total" value="0.00" />
+    </div>
+
+   
+</form>
+
+<script>
+    let total = 0;
+    let detalleIndex = 0;
+
+    document.getElementById('agregarProducto').addEventListener('click', function () {
+        let productoSelect = document.getElementById('producto');
+        let productoId = productoSelect.value;
+        let productoNombre = productoSelect.options[productoSelect.selectedIndex].text;
+        let precio = parseFloat(productoSelect.options[productoSelect.selectedIndex].getAttribute('data-precio'));
+        let cantidad = parseInt(document.getElementById('cantidad').value);
+
+        if (productoId && cantidad > 0) {
+            // Obtener el stock del producto
+            let stock = parseInt(productoSelect.options[productoSelect.selectedIndex].getAttribute('data-stock'));
+
+            // Validar si la cantidad solicitada es mayor que el stock disponible
+            if (cantidad > stock) {
+                alert(`Error: No hay suficiente stock para el producto ${productoNombre}. Solo hay ${stock} disponibles.`);
+                return; // Salir de la función si hay un error
+            }
+
+            // Calcular el subtotal
+            let subtotal = precio * cantidad; // Calcular subtotal sin formatear
+            total += subtotal; // Sumar al total
+
+            // Formatear los valores de precio y subtotal a 2 decimales
+            let precioFormateado = precio.toFixed(2);
+            let subtotalFormateado = subtotal.toFixed(2);
+
+            // Añadir la fila con los valores formateados
+            let fila = `<tr>
+                            <td>${productoNombre}</td>
+                            <td>${cantidad}</td>
+                            <td>${precioFormateado}</td>
+                            <td>${subtotalFormateado}</td>
+                            <td><button type="button" class="btn btn-danger btn-sm eliminarProducto">Eliminar</button></td>
+                            <input type="hidden" name="Detalles[${detalleIndex}].ProductoId" value="${productoId}" />
+                            <input type="hidden" name="Detalles[${detalleIndex}].Cantidad" value="${cantidad}" />
+                            <input type="hidden" name="Detalles[${detalleIndex}].Precio" value="${precioFormateado}" />
+                            <input type="hidden" name="Detalles[${detalleIndex}].Subtotal" value="${subtotalFormateado}" />
+                        </tr>`;
+
+            document.getElementById('detalles').insertAdjacentHTML('beforeend', fila);
+            document.getElementById('total').textContent = total.toFixed(2); // Mostrar total con 2 decimales
+
+            // Multiplicar el total por 100 y convertir a entero
+            document.getElementById('totalHidden').value = Math.round(total); // Valor para enviar al backend
+
+            detalleIndex++;
+        } else {
+            alert("Por favor, seleccione un producto y una cantidad válida.");
+        }
+    });
+
+    // Lógica para eliminar productos
+    document.getElementById('detalles').addEventListener('click', function (e) {
+        if (e.target.classList.contains('eliminarProducto')) {
+            let fila = e.target.closest('tr');
+            let subtotal = parseFloat(fila.querySelector('td:nth-child(4)').textContent);
+            total -= subtotal; // Restar el subtotal del total
+            fila.remove(); // Eliminar la fila
+            document.getElementById('total').textContent = total.toFixed(2); // Actualizar total
+
+            // Actualizar el total oculto
+            document.getElementById('totalHidden').value = Math.round(total); // Actualizar valor oculto
+        }
+    });
+</script>
+
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+
+    <script>
+        $(document).ready(function() {
+            $('#ventaForm').on('submit', function(e) {
+                e.preventDefault();
+
+                var form = $(this);
+
+                // Validar el formulario antes de enviarlo
+                if (form.valid()) {
+                    $.ajax({
+                        type: 'POST',
+                        url: form.attr('action'),
+                        data: form.serialize(),
+                        success: function(response) {
+                            if (response.success) {
+                                Swal.fire({
+                                    title: 'Éxito',
+                                    text: response.message,
+                                    icon: 'success',
+                                    confirmButtonText: 'Aceptar'
+                                }).then((result) => {
+                                    // Redirigir al índice o limpiar el formulario
+                                    window.location.href = '@Url.Action("Index", "Ventas")';
+                                });
+                            } else {
+                                Swal.fire({
+                                    title: 'Error',
+                                    text: 'Error al crear la venta, verifique que no exista la llave primaria o que no haya un valor nulo previamente',
+                                    icon: 'error',
+                                    confirmButtonText: 'Aceptar'
+                                });
+                            }
+                        },
+                        error: function() {
+                            Swal.fire({
+                                title: 'Error',
+                                text: 'Ocurrió un error inesperado',
+                                icon: 'error',
+                                confirmButtonText: 'Aceptar'
+                            });
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+}

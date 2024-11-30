@@ -1,0 +1,83 @@
+﻿@model CRUDVENTAS.Models.Venta
+@{
+    ViewData["Title"] = "Detalles de Venta";
+}
+
+
+@await Html.PartialAsync("Detalle")
+
+
+<div class="container sale-details">
+    <div class="sale-header">
+        <h1 class="sale-title">Registro de Venta</h1>
+    </div>
+
+    <div class="row">
+        <div class="col-md-8">
+            <div class="info-group">
+                <div class="info-label">Cliente</div>
+                <div class="info-value">@Model.Cliente.Nombre</div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="info-group">
+                        <div class="info-label">Fecha</div>
+                        <div class="info-value">@Model.Fecha.ToString("dd/MM/yyyy")</div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="info-group">
+                        <div class="info-label">Estado</div>
+                        <div class="info-value">@Model.Estado</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-group">
+                <div class="info-label">Total</div>
+                <div class="info-value">@Model.Total.ToString("C", new System.Globalization.CultureInfo("es-CO"))</div>
+            </div>
+
+            <div class="mt-4">
+                <h3 class="section-title">Detalle de los Productos</h3>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Producto</th>
+                            <th>Cantidad</th>
+                            <th>Precio</th>
+                            <th>Subtotal</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var detalle in Model.DetalleVenta)
+                        {
+                            <tr>
+                                <td>@detalle.Producto.Nombre</td>
+                                <td>@detalle.Cantidad</td>
+                                <td>@detalle.Precio.ToString("C", new System.Globalization.CultureInfo("es-CO"))</td>
+                                <td>@detalle.SubTotal.ToString("C", new System.Globalization.CultureInfo("es-CO"))</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="sale-cover" style="background-color: #f8f9fa; height: 300px; border-radius: 10px; display: flex; align-items: center; justify-content: center;">
+                <i class="fas fa-receipt fa-4x text-muted"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="action-buttons mt-4">
+        <a asp-action="Edit" asp-route-id="@Model?.VentaId" class="btn-custom btn-edit me-2">
+            <i class="fas fa-edit me-2"></i>Editar
+        </a>
+        <a asp-action="Index" class="btn-custom btn-back">
+            <i class="fas fa-arrow-left me-2"></i>Volver
+        </a>
+    </div>
+</div>

@@ -1,0 +1,110 @@
+﻿<style>
+    h1 {
+        text-align: center;
+    }
+
+    body {
+        font-family: "Red Hat Text", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: italic;
+
+    }
+
+    .action-buttons {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px; /* Espacio entre botones */
+    }
+
+        .action-buttons .btn {
+            padding: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+            .action-buttons .btn img {
+                width: 20px;
+                height: 20px;
+            }
+
+        .action-buttons .btn-delete{
+            padding: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+            .action-buttons .btn-delete img {
+                width: 20px;
+                height: 20px;
+            }
+
+    .dt-button {
+        padding: 8px 16px;
+        border-radius: 6px;
+        border: 2px solid black;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: white;
+        background-color: #81c9fa;
+        font-weight:bold;
+    }
+
+        .dt-button img {
+            width: 30px;
+            height: 30px;
+        }
+
+
+
+    .btn-create img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .dt-button:hover {
+        background-color: #3c1ff8;
+    }
+
+    .btn-create {
+        background-color: #81c9fa;
+        color: white;
+        border: 2px solid black;
+        font-weight:bold;
+    }
+
+        .btn-create:hover {
+            background-color: #3c1ff8;
+            color:white;
+            font-weight: bold;
+        }
+
+    .action-buttons .btn {
+        background-color: lightgrey;
+        color: black;
+       
+    }
+
+    .btn-delete{
+        background-color: lightgray;
+        color: black;
+        
+    }
+
+    table.dataTable tbody tr:nth-child(odd) {
+        background-color: #def7ff
+    }
+
+    table.dataTable tbody tr:nth-child(even) {
+        background-color: #fff;
+    }
+
+
+</style>

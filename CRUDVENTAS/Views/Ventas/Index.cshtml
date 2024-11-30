@@ -1,0 +1,226 @@
+﻿@model IEnumerable<CRUDVENTAS.Models.Venta>
+
+
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+
+<h1>Gestión de ventas</h1>
+
+@* Importación de estilo index
+ *@
+
+@await Html.PartialAsync("IndexStyle")
+
+<p>
+    <div class="create">
+        <a asp-action="Create" class="btn btn-create ">
+            <img src="~/icons/sales.png" alt="Crear" class="btn-icon" />
+            Crear venta
+
+        </a>
+    </div>
+</p>
+<table id="example" class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Fecha)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Total)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cliente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Estado)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Fecha)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Total)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cliente.Nombre)
+                </td>
+                <td>
+                    <input type="checkbox" class="estado-switch"
+                           data-id="@item.VentaId" @(item.Estado == "Anulada" ? "" : "checked") />
+                </td>
+                <td>
+                    <div class="action-buttons">
+                        <a asp-action="Edit" class="btn " asp-route-id="@item.VentaId">
+
+                            <img src="~/icons/edit.png" width="20" height="20" />
+                        </a>
+                        <a asp-action="Details" class="btn" asp-route-id="@item.VentaId">
+                            <img src="~/icons/info.png" />
+                        </a>
+                        <a asp-action="Delete" class="btn-delete" asp-route-id="@item.VentaId" data-id="@item.VentaId">
+                            <img src="~/icons/delete.png" />
+                        </a>
+                    </div>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<input type="hidden" name="__RequestVerificationToken" value="@Html.AntiForgeryToken().ToString()" />
+<script>
+
+    document.querySelectorAll('.estado-switch').forEach(switchElement => {
+        //Vamos a realizar el cambio para cada elemento adicionandolo según el evento de escucha (change)
+        switchElement.addEventListener('change', function () {
+            const ventaId = this.getAttribute('data-id');
+            const nuevoEstado = this.checked ? "Realizada" : "Anulada";
+
+            //Enviar una solicitud AJAX (permite el intercambio de datos de
+            // de manera asincrona) para actualizar el estado
+            fetch(`/Ventas/ActualizarEstado/${ventaId}`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRF-TOKEN': document.querySelector('input[name="__RequestVerificationToken"]').value // Para protección CSRF
+                },
+                body: JSON.stringify({ Estado: nuevoEstado }) // Asegúrate de que el nombre de la propiedad sea "Estado"
+            }).then(response => {
+                if (!response.ok) {
+                    alert("Error al actualizar el estado.");
+                } else {
+                    alert(`Estado actualizado a: ${nuevoEstado}`);
+                }
+            }).catch(error => {
+                console.error('Error:', error);
+                alert("Ocurrió un error al intentar actualizar el estado.");
+            });
+        });
+    });
+</script>
+@* Script del datatable *@
+
+<script>
+    new DataTable('#example', {
+        layout: {
+            topStart: {
+                buttons: [
+                    {
+                        extend: 'copy',
+                        text: 'Copiar',
+                        className: 'botonCopiar dt-button'
+                    },
+                    {
+                        extend: 'csv',
+                    text: '<img src="' + '@Url.Content("~/icons/csv.png")' + '" alt="CSV" class="btn-icon" />',
+                    className: 'botonCsv dt-button'
+
+                    },
+                    {
+                              extend: 'excel',
+                    text: '<img src="' + '@Url.Content("~/icons/excel.png")' + '" alt="Excel" class="btn-icon" />',
+                    className: 'botonExcel dt-button'
+                    },
+                    {
+                        extend: 'pdfHtml5',
+                    text: '<img src="' + '@Url.Content("~/icons/pdf.png")' + '" alt="PDF" class="btn-icon" />',
+                    title:"Cliente",
+                    className: 'botonPdf dt-button',
+                     exportOptions: {
+                         columns: [ 0, 1, 2, 3]
+                    },
+                        customize: function(doc) {
+                        doc.content[1].margin = [ 130, 0, 130, 0 ] //left, top, right, bottom
+                      }
+
+                    },
+                    {
+                        extend: 'print',
+                    text: '<img src="' + '@Url.Content("~/icons/printer.png")' + '" alt="Imprimir" class="btn-icon" />',
+                    className: 'botonPrint dt-button'
+                    },
+                    {
+                         extend: 'colvis',
+                    text: '<img src="' + '@Url.Content("~/icons/filter-time.png")' + '" alt="Filtrar" class="btn-icon" />',
+                    className: 'botonColvis dt-button'
+                    }
+                ]
+            }
+        },
+        language: {
+            url: '//cdn.datatables.net/plug-ins/2.0.2/i18n/es-ES.json',
+        },
+        scrollX: true,
+        initComplete: function () {
+            $(".dt-buttons").removeClass("dt-buttons");
+            $(".dt-button").addClass("botones");
+        }
+
+    });
+</script>
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+          $(document).ready(function () {
+            $(".btn-delete").click(function (e) {
+                e.preventDefault();
+                var id = $(this).data("id");
+
+                // Mostrar la confirmación de SweetAlert
+                Swal.fire({
+                    title: '¿Estás seguro?',
+                    text: "¡No podrás revertir esto!",
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: '¡Sí, eliminar!'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        // Realizar la solicitud de eliminación
+                        $.ajax({
+                            url: '/Ventas/Delete/' + id,
+                            type: 'POST',
+                            success: function (data) {
+                                if (data.success) {
+                                    // Si la eliminación fue exitosa
+
+                                    Swal.fire(
+                                        '¡Eliminado!',
+                                        'La venta ha sido eliminada.',
+                                        'success'
+                                    ).then(() => {
+                                        // Recarga la página para actualizar la lista de clientes
+                                        location.reload();
+                                    });
+                                }
+                            },
+                            error: function (xhr, status, error) {
+                                // Si ocurre un error de red u otro tipo
+                                Swal.fire(
+                                    '¡Error!',
+                                    'Ocurrió un error al eliminar la venta.',
+                                    'error'
+                                );
+                            }
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+}
+
+
